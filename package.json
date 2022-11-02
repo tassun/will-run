@@ -1,15 +1,15 @@
 {
   "name": "will-run",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Runner for moleculer services and express application",
   "main": "index.js",
   "scripts": {
     "build": "tsc --project ./",
-    "dev": "ts-node-dev src/kn.express.ts",
-    "express": "node dist/kn.express.js ./dist/services",
-    "express:ins": "node dist/kn.express.js --instances cpu ./dist/services",
-    "runner": "node dist/kn.runner.js ./dist",
-    "runner:ins": "node dist/kn.runner.js --instances cpu ./dist",
+    "dev": "ts-node-dev src/test/kn.express.ts",
+    "express": "node dist/test/kn.express.js ./dist/services",
+    "express:ins": "node dist/test/kn.express.js --instances cpu ./dist/services",
+    "runner": "node dist/test/kn.runner.js ./dist",
+    "runner:ins": "node dist/test/kn.runner.js --instances cpu ./dist",
     "start": "moleculer-runner ./dist",
     "start:ins": "moleculer-runner --instances cpu ./dist",
     "test": "ts-node-dev src/test/test.kn.express.ts"
@@ -24,6 +24,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tassun/will-run.git"
+  },
+  "bin": {
+    "kn-runner": "./bin/kn-runner.js"
   },
   "dependencies": {
     "args": "^5.0.3",

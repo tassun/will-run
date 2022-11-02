@@ -50,7 +50,7 @@ broker.start()
 ```
 
 #### KnRunner
-Like moleculer-runner `KnRunner` can run with express application
+Like moleculer-runner `KnRunner` can run with express application and using `moleculer.config.js` as default broker options
 
 ```typescript
 import KnAPI from "will-api";
@@ -76,3 +76,14 @@ runner.start(process.argv).then(() => {
     }
 });
 ```
+
+#### Syntax
+
+    kn-runner [options] [service files or directories]
+
+ex.
+
+    "scripts": {
+        "start": "kn-runner ./dist",
+        "start:ins": "kn-runner --instances max ./dist",
+    }
